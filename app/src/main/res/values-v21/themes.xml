@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme.DayNight" parent="@android:style/Theme.Material.Light"/>
+
+    <style name="Base.AppTheme" parent="AppTheme.DayNight">
+    </style>
+
+    <style name="AppTheme" parent="Base.AppTheme">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@android:color/transparent</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@null</item>     <item name="android:colorEdgeEffect">?android:colorAccent</item>
+    </style>
+    
+</resources>

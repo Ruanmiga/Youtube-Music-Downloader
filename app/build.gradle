@@ -1,0 +1,36 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "com.fastsoft.yt.downloader"
+        minSdkVersion 19
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+    }
+    
+    lintOptions {
+        disable "InvalidPackage"
+        disable "MissingTranslation"
+   }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+	implementation project(':ios-bottomsheet')
+    implementation project(':jsevaluator')
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation 'com.android.support:cardview-v7:27.1.1'
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:design:27.1.1'
+	implementation 'com.github.bumptech.glide:glide:3.7.0'
+}
